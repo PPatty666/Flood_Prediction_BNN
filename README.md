@@ -4,7 +4,11 @@
 
 <!-- [![github release version](https://img.shields.io/github/v/release/nhn/tui.editor.svg?include_prereleases)](https://github.com/nhn/tui.editor/releases/latest) [![npm version](https://img.shields.io/npm/v/@toast-ui/editor.svg)](https://www.npmjs.com/package/@toast-ui/editor) [![license](https://img.shields.io/github/license/nhn/tui.editor.svg)](https://github.com/nhn/tui.editor/blob/master/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/nhn/tui.editor/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) [![code with hearth by NHN Cloud](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-NHN_Cloud-ff1414.svg)](https://github.com/nhn) -->
 
-<img src="https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/method.jpg?raw=true" />
+<img src="https://github.com/PPatty666/Flood_Prediction_BNN/blob/main/img/bnn_train_val_inspection_flow.png?raw=true" />
+
+## ⭐ Key Contribution
+
+A central contribution of this work is the use of Bayesian neural network uncertainty to detect potential false negatives and mitigate information bias in crowdsourced flood observations. By explicitly modeling predictive uncertainty, the framework identifies cases where missing or mixed and "conflicting" crowdsourced reports may lead to under-detection of flood impacts.
 
 
 ## 🚩 Table of Contents
