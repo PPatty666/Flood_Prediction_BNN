@@ -18,7 +18,7 @@ A central contribution of this work is the use of Bayesian neural network uncert
 - [Why Bayesian Neuro Network?](#-why-bayesian-neuro-network)
 - [1st Round Results](#-1st-round-results)
 - [2nd Round Results](#-2nd-round-results)
-- [Overcoming information bias and detecting potential false negatives via model uncertainty (author’s favorite part!)](#overcoming-information-bias-and-detecting-potential-false-negatives-via-model-uncertainty)
+- [Overcoming information bias and detecting potential false negatives via model uncertainty](#overcoming-information-bias-and-detecting-potential-false-negatives-via-model-uncertainty)
 - [Proof of Generalizability](#-proof-of-generalizability)
 - [Limitations](#-limitations)
 - [Highlights](#-highlights)
@@ -111,7 +111,7 @@ You can merge columns of the table header and body area.
 * [Internationalization (i18n)](https://github.com/nhn/tui.editor/tree/master/docs/en/i18n.md) : Supports English, Dutch, Korean, Japanese, Chinese, Spanish, German, Russian, French, Ukrainian, Turkish, Finnish, Czech, Arabic, Polish, Galician, Swedish, Italian, Norwegian, Croatian + language and you can extend.
 * [Widget](https://github.com/nhn/tui.editor/tree/master/docs/en/widget.md) : This feature allows you to configure the rules that replaces the string matching to a specific `RegExp` with the widget node.
 * [Custom Block](https://github.com/nhn/tui.editor/tree/master/docs/en/custom-block.md) : Nodes not supported by Markdown can be defined through custom block. You can display the node what you want through writing the parsing logic with custom block. -->
-![Kirkwood, Charlie, et al., 2022](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/bnn.jpg?raw=true)
+<!-- ![Kirkwood, Charlie, et al., 2022](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/bnn.jpg?raw=true) -->
 
 We used Monte Carlo Dropout to approximate Bayesian approach. 
 
@@ -140,10 +140,10 @@ Because... We want to ask the model to mimic the scenario of **Planing in the fa
 
 Here are more [examples](https://nhn.github.io/tui.editor/latest/tutorial-example01-editor-basic) and play with TOAST UI Editor! -->
 We evaulated our model quantitatively and then qualitatively.
-* Quantitative Evaluation
-![Idalia 1st round training quantitative evaluation](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/idalia1_quant.jpg?raw=true)
+<!-- * Quantitative Evaluation -->
+<!-- ![Idalia 1st round training quantitative evaluation](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/idalia1_quant.jpg?raw=true) -->
 
-* Qualitative Evaluation
+* Qualitative Evaluation Examples
 ![Idalia 1st round training qualitative Evaluation, flooded](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/idalia1_qualitative_flood.jpg?raw=true)
 
 ![Idalia 1st round training qualitative Evaluation, not flooded](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/idalia1_qualitative_notflood.jpg?raw=true)
@@ -169,7 +169,7 @@ Again, we evaluated our model quantitatively then qualitatively. Overall, the mo
 | Yes | 11+ | Yes | Yes | Yes | -->
 
 ## 🔍 Overcoming information bias and detecting potentially false negatives via model uncertainty
-![Testing the effectiveness of model uncertainty in identifying missed flooding areas](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/corrected_results_idalia2.jpg?raw=true)
+![Testing the effectiveness of model uncertainty in identifying missed flooding areas](https://github.com/PPatty666/Flood_Prediction_BNN/blob/main/img/Idalia_damage_val_uncertainty.png?raw=true)
 
 After validating the model with available crowd-sourced reports, we use predictive uncertainty from the Bayesian neural network to identify locations where flooding may be missed due to reporting bias. In mixed-flooding areas—where nearby locations with similar conditions experience different outcomes—the model exhibits elevated uncertainty, signaling higher risk of false negatives. By flagging locations with low mean risk but high spread, positive skewness, and heavy right tails in the predictive distribution, we detect up to 60% of false negatives in Hurricane Idalia damage data, providing actionable guidance for targeted verification beyond voluntary reports.
 
