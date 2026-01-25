@@ -1,4 +1,4 @@
-# Towards Real-Time Flood Prediction Models Using Crowdsourced Information
+# Overcoming Information Bias in Flood Prediction through Community-Engaged and Uncertainty-Aware Bayesian Learning
 
 <!-- > GFM  Markdown and WYSIWYG Editor - Productive and Extensible -->
 
@@ -14,6 +14,7 @@
 - [Why Bayesian Neuro Network?](#-why-bayesian-neuro-network)
 - [1st Round Results](#-1st-round-results)
 - [2nd Round Results](#-2nd-round-results)
+- [Overcoming information bias and detecting potential false negatives via model uncertainty (author’s favorite part!)](#overcoming-information-bias-and-detecting-potential-false-negatives-via-model-uncertainty)
 - [Proof of Generalizability](#-proof-of-generalizability)
 - [Limitations](#-limitations)
 - [Highlights](#-highlights)
@@ -116,10 +117,13 @@ We used Monte Carlo Dropout to approximate Bayesian approach.
 
 * Simulate a set of posterior samples by combining prior and likelihood. The trained model takes a subset of information in each simulation to make predictions
 
-* Take the mean value of the entire distribution of posterior predictions to embrace a wide range of possible outcomes.
+* Take the mean value of the entire distribution of posterior predictions to incorporate all simulated outcomes, provides operationally useful information for decision-making.
 
 **Yes, but Why?**
 Because... We want to ask the model to mimic the scenario of **Planing in the face of incomplete information**. In planning processes, we rarely have all the information we need; we only have access to subsets of the overall picture, and these subsets constantly change over time. We want our model to make predictions under such conditions so that we can generate a wide range of outcomes for different scenarios and incorporate all of them into our final results.
+
+**Moreover, uncertainty from the full distribution offers transparent guidance for targeted verification beyond available crowd-sourced data, helping mitigate the inherent bias of voluntary reporting.**
+
 
 ## 🐾 1st Round Results
 
@@ -160,6 +164,10 @@ Again, we evaluated our model quantitatively then qualitatively. Overall, the mo
 | :---------: | :---------: | :---------: | :---------: | :---------: |
 | Yes | 11+ | Yes | Yes | Yes | -->
 
+## 🔍 Overcoming information bias and detecting potentially false negatives via model uncertainty
+![Testing the effectiveness of model uncertainty in identifying missed flooding areas](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/corrected_results_idalia2.jpg?raw=true)
+
+After validating the model with available crowd-sourced reports, we use predictive uncertainty from the Bayesian neural network to identify locations where flooding may be missed due to reporting bias. In mixed-flooding areas—where nearby locations with similar conditions experience different outcomes—the model exhibits elevated uncertainty, signaling higher risk of false negatives. By flagging locations with low mean risk but high spread, positive skewness, and heavy right tails in the predictive distribution, we detect up to 60% of false negatives in Hurricane Idalia damage data, providing actionable guidance for targeted verification beyond voluntary reports.
 
 ## 🌏 Proof of Generalizability
 We applied the same data collection procedure and prediction method to assess flood risk for another storm surge event on December 17, 2023, in Pinellas County, and it performed quite well.
@@ -228,7 +236,7 @@ Although the model does not make flawless predictions, over-alerting at an appro
 
 - We showed how to improve the model performance by adjusting the training dataset, IF NECESSARY
 
-- We employed the Bayesian Framework to mimic “Planning in the face of incomplete information”
+- We employed the Bayesian Framework to mimic “Planning in the face of incomplete information”. **Additionally, we leveraged model uncertainty to effectively inspect potentially missed flooding areas, going beyond available crowd-sourced information and helping to overcome the inherent biases in crowd-sourced data used to train the model**
 
 - We know this modeling approach is still quite prototyping and far from perfect. However, **THE most important contribution** of our work is, it builds a communication bridge between flood prediction modelers and the communities. It encourage modelers to take the initiative to reach out to communities instead of passively monitoring the social media activities behind the scene do the flood prediction just on their own.
 
@@ -245,6 +253,24 @@ Subhrajit Guhathakurta (subhro.guha@design.gatech.edu)
 Barnali Dixon (bdixon@usf.edu)
 <!-- * [NHN Dooray! - Collaboration Service (Project, Messenger, Mail, Calendar, Drive, Wiki, Contacts)](https://dooray.com)
 * [UNOTES - Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=ryanmcalister.Unotes) -->
+
+## Code Background
+
+The analysis scripts in this repository were developed by the author for academic research. The implementation was informed by publicly available tutorials and official documentation from commonly used Python scientific libraries.
+
+These examples were adapted and integrated to construct a complete, original analysis workflow tailored to this study.
+
+## License
+
+The code in this repository is released under the MIT License.
+See the LICENSE file for details.
+
+## Publication Status
+
+This repository contains analysis code shared for transparency and reproducibility purposes and is associated with a manuscript under preparation for submission to a peer-reviewed journal.
+
+
+
 
 
 <!-- ## 📜 License
