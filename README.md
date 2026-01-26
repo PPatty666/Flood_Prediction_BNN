@@ -14,16 +14,18 @@ A central contribution of this work is the use of Bayesian neural network uncert
 ## 🚩 Table of Contents
 
 <!-- - [Packages](#-packages) -->
-- [Why Crowdsourced Information?](#-why-crowdsourced-information)
+- [Why crowdsourced information?](#-why-crowdsourced-information)
 - [Why Bayesian Neuro Network?](#-why-bayesian-neuro-network)
-- [1st Round Results](#-1st-round-results)
-- [2nd Round Results](#-2nd-round-results)
+- [1st round results](#-1st-round-results)
+- [2nd round results](#-2nd-round-results)
 - [Overcoming information bias and detecting potential false negatives via model uncertainty](#overcoming-information-bias-and-detecting-potential-false-negatives-via-model-uncertainty)
-- [Proof of Generalizability](#-proof-of-generalizability)
+- [Proof of generalizability](#-proof-of-generalizability)
 - [Limitations](#-limitations)
 - [Highlights](#-highlights)
 - [Author](#-author)
-<!-- - [License](#-license) -->
+- [Code background](#-code-background)
+- [License](#-license)
+- [Publication status](#-publication-status)
 
 
 <!-- ## 📦 Packages
@@ -52,7 +54,7 @@ A central contribution of this work is the use of Bayesian neural network uncert
 | [`@toast-ui/editor-plugin-uml`](https://github.com/nhn/tui.editor/tree/master/plugins/uml) | Plugin to render UML | -->
 
 
-## 🤖 Why Crowdsourced Information?
+## 🤖 Why crowdsourced information?
 
 Scholars have valued monitoring flooding reports on social media to reveal flood propagation for the past 10 years. More recently, they have incorporated predictors such as topographic and land cover features, precipitation, and others, exploring the relationship between these predictors and **not only** flooded **but also** unflooded spots using machine learning. This allows them to map flood risk for an entire region, including areas with limited flood reports.
 
@@ -129,7 +131,7 @@ Because... We want to ask the model to mimic the scenario of **Planing in the fa
 **Moreover, uncertainty from the full distribution offers transparent guidance for targeted verification beyond available crowd-sourced data, helping mitigate the inherent bias of voluntary reporting.**
 
 
-## 🐾 1st Round Results
+## 🐾 1st round results
 
 <!-- * [Basic](https://nhn.github.io/tui.editor/latest/tutorial-example01-editor-basic)
 * [Viewer](https://nhn.github.io/tui.editor/latest/tutorial-example04-viewer)
@@ -157,7 +159,7 @@ We evaulated our model quantitatively and then qualitatively.
     * Over alerting due to modeler's over alerting interpretation
     ![Idalia 1st round training qualitative Evaluation, over alerting due to over alerting interpretation](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/over_interpret2alterting_idalia1.jpg?raw=true)
 
-## 🔧 2nd Round Results
+## 🔧 2nd round results
 After verifying the results of our first-round training with neighbors in Pinellas County, we realized the need to update our interpretation of their messages and revise the training dataset to regularize the model's predictions. 
 ![Idalia 2nd round training, dataset revision](https://github.com/GT-CURA/Flood_Prediction_BNN_Pinellas_FL/blob/main/img/training_ds_revise_idalia2.jpg?raw=true)
 
@@ -173,7 +175,7 @@ Again, we evaluated our model quantitatively then qualitatively. Overall, the mo
 
 After validating the model with available crowd-sourced reports, we use predictive uncertainty from the Bayesian neural network to identify locations where flooding may be missed due to reporting bias. In mixed-flooding areas—where nearby locations with similar conditions experience different outcomes—the model exhibits elevated uncertainty, signaling higher risk of false negatives. By flagging locations with low mean risk but high spread, positive skewness, and heavy right tails in the predictive distribution, we detect up to 60% of false negatives in Hurricane Idalia damage data, providing actionable guidance for targeted verification beyond voluntary reports.
 
-## 🌏 Proof of Generalizability
+## 🌏 Proof of generalizability
 We applied the same data collection procedure and prediction method to assess flood risk for another storm surge event on December 17, 2023, in Pinellas County, and it performed quite well.
 <!-- TOAST UI products are open source, so you can create a pull request(PR) after you fix issues. Run npm scripts and develop yourself with the following process.
 
@@ -258,7 +260,7 @@ Barnali Dixon (bdixon@usf.edu)
 <!-- * [NHN Dooray! - Collaboration Service (Project, Messenger, Mail, Calendar, Drive, Wiki, Contacts)](https://dooray.com)
 * [UNOTES - Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=ryanmcalister.Unotes) -->
 
-## 📜 Code Background
+## 📜 Code background
 
 The analysis scripts in this repository were developed by the author for academic research. The implementation was informed by publicly available tutorials and official documentation from commonly used Python scientific libraries.
 
@@ -269,7 +271,7 @@ These examples were adapted and integrated to construct a complete, original ana
 The code in this repository is released under the MIT License.
 See the LICENSE file for details.
 
-## 📝 Publication Status
+## 📝 Publication status
 
 This repository contains analysis code shared for transparency and reproducibility purposes and is associated with a manuscript under preparation for submission to a peer-reviewed journal.
 
