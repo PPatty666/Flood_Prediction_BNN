@@ -18,7 +18,7 @@ A central contribution of this work is the use of Bayesian neural network uncert
 - [Why Bayesian Neuro Network?](#-why-bayesian-neuro-network)
 - [1st round results](#-1st-round-results)
 - [2nd round results](#-2nd-round-results)
-- [Overcoming information bias and detecting potential false negatives via model uncertainty](#overcoming-information-bias-and-detecting-potential-false-negatives-via-model-uncertainty)
+- [Overcoming information bias and detecting potential false negatives via model uncertainty](#-overcoming-information-bias-and-detecting-potential-false-negatives-via-model-uncertainty)
 - [Proof of generalizability](#-proof-of-generalizability)
 - [Limitations](#-limitations)
 - [Highlights](#-highlights)
