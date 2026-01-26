@@ -170,7 +170,7 @@ Again, we evaluated our model quantitatively then qualitatively. Overall, the mo
 | :---------: | :---------: | :---------: | :---------: | :---------: |
 | Yes | 11+ | Yes | Yes | Yes | -->
 
-## 🔍 Overcoming information bias and detecting potentially false negatives via model uncertainty
+## 🔍 Overcoming information bias and detecting potential false negatives via model uncertainty
 ![Testing the effectiveness of model uncertainty in identifying missed flooding areas](https://github.com/PPatty666/Flood_Prediction_BNN/blob/main/img/Idalia_damage_val_uncertainty.png?raw=true)
 
 After validating the model with available crowd-sourced reports, we use predictive uncertainty from the Bayesian neural network to identify locations where flooding may be missed due to reporting bias. In mixed-flooding areas—where nearby locations with similar conditions experience different outcomes—the model exhibits elevated uncertainty, signaling higher risk of false negatives. By flagging locations with low mean risk but high spread, positive skewness, and heavy right tails in the predictive distribution, we detect up to 60% of false negatives in Hurricane Idalia damage data, providing actionable guidance for targeted verification beyond voluntary reports.
