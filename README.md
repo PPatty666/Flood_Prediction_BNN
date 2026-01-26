@@ -258,18 +258,18 @@ Barnali Dixon (bdixon@usf.edu)
 <!-- * [NHN Dooray! - Collaboration Service (Project, Messenger, Mail, Calendar, Drive, Wiki, Contacts)](https://dooray.com)
 * [UNOTES - Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=ryanmcalister.Unotes) -->
 
-## Code Background
+## 📜 Code Background
 
 The analysis scripts in this repository were developed by the author for academic research. The implementation was informed by publicly available tutorials and official documentation from commonly used Python scientific libraries.
 
 These examples were adapted and integrated to construct a complete, original analysis workflow tailored to this study.
 
-## License
+## 📄 License
 
 The code in this repository is released under the MIT License.
 See the LICENSE file for details.
 
-## Publication Status
+## 📝 Publication Status
 
 This repository contains analysis code shared for transparency and reproducibility purposes and is associated with a manuscript under preparation for submission to a peer-reviewed journal.
 
