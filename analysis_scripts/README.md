@@ -12,7 +12,7 @@ Everything included here reflects the setup used by the author during developmen
 
 ---
 
-# 🧪 Reproducible environment
+## 🧪 Reproducible environment
 
 The provided `environment.yml` file allows you to recreate the exact Conda environment where the code was:
 
@@ -21,9 +21,10 @@ The provided `environment.yml` file allows you to recreate the exact Conda envir
 - Verified  
 
 This is to make sure the code runs consistently and reproducibly across different systems.
+
 ---
 
-# 🚀 How to set up the environment
+## 🚀 How to set up the environment
 
 ### 1️⃣ Create the conda environment
 
@@ -33,4 +34,4 @@ conda env create -f environment.yml
 
 conda activate <environment_name>
 
-# Happy modeling! 🚀
+### Happy modeling! 🧠⚙️✨
